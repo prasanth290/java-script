@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word count</title>
+</head>
+<body>
+    <h1>word count</h1>
+    <br>
+    <h2>Type a sentence</h2>
+    <div>
+        <textarea name="textarea" id="inputtext" row="70" cols="60" placeholder="Type or text"></textarea>
+    </div>
+    <div>
+        <button type="submit" onclick="convert()">calculate words</button>
+    </div>
+    <div id="result"></div>
+    <script>
+        function convert(){
+        let inputtext = document.getElementById("inputtext").value
+        let wordsarray = inputtext.split(/\s+/)
+        let words = wordsarray.length
+        let result = document.getElementById("result")
+        result.innerHTML=words
+        }
+    </script>
+</body>
+</html>
